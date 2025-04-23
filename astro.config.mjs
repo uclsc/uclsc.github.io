@@ -6,20 +6,19 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Upstate Coders League',
 			lastUpdated: true,
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			tableOfContents: false,
+			pagination: false,
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/uclsc' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Meetups',
+					slug: 'meetups',
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Library',
+					autogenerate: { directory: 'library' },
 				},
 			],
 		}),
